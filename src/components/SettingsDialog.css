@@ -1,0 +1,101 @@
+.modal-content.settings-dialog {
+  width: min(900px, calc(100vw - 48px));
+  height: min(860px, 90dvh);
+  max-height: calc(100dvh - 24px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.settings-dialog .modal-header {
+  position: relative;
+  flex-shrink: 0;
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--dark-surface, #fff);
+}
+.settings-dialog .modal-title {font-size: 21px; margin: 0 36px 7px 0;}
+.settings-dialog .modal-description {font-size: 11px; margin: 0; line-height: 1.8;}
+.settings-dialog .modal-close {top: 23px; right: 23px; width: 32px; height: 32px; display: grid; place-items: center;}
+.settings-scroll-area {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #dce1ed transparent;
+  padding: 22px 28px;
+  background: var(--dark-surface-accent, #f7f8fc);
+}
+.settings-status {display: flex; align-items: center; gap: 9px; margin-bottom: 20px; color: var(--dark-text-secondary, #758c82); font-size: 11px; line-height: 1.7;}
+.settings-status-badge {margin-left: auto; border: 1px solid var(--dark-border, #dce7e1); background: var(--dark-surface-down, #eff6f2); padding: 2px 8px; border-radius: 5px; font-size: 9px; white-space: nowrap;}
+.settings-status.is-demo {color: var(--dark-text-warm, #a58951);}
+.settings-status.is-demo .settings-status-badge {background: var(--dark-surface-warm, #fff8e8); border-color: var(--dark-border-warm, #efe3c6);}
+.settings-grid {display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); grid-template-areas: "cash fees" "quote fees" "data data"; gap: 18px; align-items: stretch;}
+.settings-dialog .settings-card {min-width: 0; background: var(--dark-surface, #fff); border: 1px solid var(--dark-border-accent, #e6eaf3); border-radius: 12px; padding: 20px; box-shadow: 0 2px 6px #26365d02;}
+.cash-settings {grid-area: cash;}
+.commission-settings {grid-area: fees;}
+.default-stop-loss {grid-area: cash;}
+.default-stop-loss .target-inputs {grid-template-columns: 140px minmax(0, 1fr);}
+.default-stop-loss select {min-height: 42px; padding: 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--dark-surface, #fff); color: inherit; font-size: 12px;}
+.quote-settings {grid-area: quote;}
+.data-settings {grid-area: data;}
+.settings-card-heading {display: flex; align-items: center; gap: 11px; margin-bottom: 15px;}
+.settings-card-icon {display: grid; place-items: center; width: 36px; height: 36px; background: var(--dark-surface-accent, #f0f2fb); border: 1px solid var(--dark-border-accent, #e7eaf7); border-radius: 10px; color: var(--dark-text-muted, #7e89b2);}
+.settings-dialog .settings-card-heading h3 {margin: 0 0 5px; font-size: 13px; font-weight: 600; color: var(--dark-text-secondary, #465570);}
+.settings-card-heading div > span {font-size: 10px; color: var(--dark-text-muted, #9ba5b6);}
+.settings-dialog .fee-description {font-size: 11px; line-height: 1.85; color: var(--dark-text-muted, #8c98ac); margin-bottom: 16px;}
+.settings-dialog .fee-settings .form {gap: 16px;}
+.settings-dialog .field label {font-size: 11px; color: var(--dark-text-secondary, #78859c); line-height: 1.6;}
+.settings-dialog .field input {min-height: 42px; background: var(--dark-surface-accent, #fcfdff); border-color: var(--dark-border-accent, #dfe5ef); font-variant-numeric: tabular-nums;}
+.settings-dialog .cash-settings input {font-size: 22px; min-height: 50px; font-weight: 550; color: var(--dark-text-secondary, #4e6183);}
+.settings-dialog .cash-settings input::placeholder {font-size: 13px; font-weight: 400;}
+.settings-dialog .fee-group {padding: 15px 12px; background: var(--dark-surface-accent, #fafbff); border-color: var(--dark-border-accent, #e4e9f4); border-radius: 9px;}
+.settings-dialog .fee-group legend {font-size: 12px; padding: 0 7px;}
+.settings-dialog .fee-group .field-grid {gap: 12px;}
+.settings-dialog .fee-group input {background: var(--dark-surface, #fff); font-size: 15px;}
+.settings-dialog .fee-settings .button {min-height: 38px;}
+.settings-dialog .fee-settings .fee-description:last-of-type {margin-bottom: 0;}
+.settings-dialog .setting-row {gap: 14px; align-items: center;}
+.settings-dialog .setting-row strong {font-size: 11px; color: var(--dark-text-secondary, #63738c); font-weight: 550;}
+.settings-dialog .setting-row p {font-size: 10px; line-height: 1.9; color: var(--dark-text-muted, #9aa4b5); margin-top: 6px;}
+.settings-dialog .toggle {flex-shrink: 0;}
+.settings-inline-note {display: flex; align-items: center; gap: 6px; font-size: 10px; color: var(--dark-text-muted, #939eb2); margin-top: 18px; padding-top: 13px; border-top: 1px solid var(--dark-border-accent, #edf0f6);}
+.settings-inline-note > span:last-child {margin-left: auto; font-size: 9px; color: var(--dark-text-muted, #a5aebe);}
+.settings-refresh-dot {width: 6px; height: 6px; border-radius: 50%; background: var(--dark-surface-soft, #bec6d6);}
+.settings-refresh-dot.enabled {background: #52aa8c;}
+.settings-backup-options {display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px;}
+.settings-backup-option {padding: 16px; background: var(--dark-surface-accent, #fafbff); border: 1px solid var(--dark-border-accent, #e9edf6); border-radius: 8px; display: flex; flex-direction: column; align-items: flex-start; gap: 14px;}
+.settings-backup-option strong {font-size: 12px; font-weight: 550; color: var(--dark-text-secondary, #657491);}
+.settings-backup-option p {font-size: 10px; line-height: 1.8; color: var(--dark-text-muted, #9aa4b6); margin-top: 7px;}
+.settings-backup-option .button {font-size: 11px; min-height: 36px;}
+.settings-backup-option a[aria-disabled="true"] {opacity: .5; cursor: default;}
+.settings-demo-row {display: flex; gap: 12px; align-items: center; justify-content: space-between; border-top: 1px solid var(--dark-border-accent, #edf0f6); padding-top: 16px; margin-top: 17px; font-size: 10px; line-height: 1.8; color: var(--dark-text-muted, #99a3b5);}
+.settings-demo-row .text-button {font-size: 11px; flex-shrink: 0;}
+.settings-calculation {padding: 16px 4px 0; font-size: 11px; color: var(--dark-text-muted, #8995aa);}
+.settings-calculation summary {cursor: pointer; width: fit-content;}
+.settings-calculation summary:focus-visible {outline: 3px solid #a9b0ee; outline-offset: 4px; border-radius: 3px;}
+.settings-calculation p {font-size: 10px; line-height: 1.9; padding-top: 11px; color: var(--dark-text-muted, #98a3b5);}
+.settings-dialog-footer {display: flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: 18px; padding: 17px 28px; background: var(--dark-surface, #fff); border-top: 1px solid var(--border);}
+.settings-dialog-footer p {font-size: 10px; color: var(--dark-text-muted, #96a0b2); line-height: 1.8;}
+.settings-dialog-footer .button {min-width: 90px; flex-shrink: 0;}
+@media (max-width: 700px) {
+  .modal-content.settings-dialog {width: calc(100vw - 24px); height: calc(100dvh - 24px); border-radius: 14px;}
+  .settings-dialog .modal-header {padding: 20px 20px 17px;}
+  .settings-dialog .modal-title {font-size: 19px;}
+  .settings-dialog .modal-close {top: 16px; right: 15px;}
+  .settings-scroll-area {padding: 18px 18px 22px;}
+  .settings-grid {grid-template-columns: minmax(0, 1fr); grid-template-areas: "cash" "fees" "quote" "data"; gap: 14px;}
+  .settings-dialog .settings-card {padding: 18px;}
+  .settings-status {font-size: 10px; align-items: flex-start; gap: 7px;}
+  .settings-status > svg {margin-top: 2px;}
+  .settings-demo-row {align-items: flex-start; flex-direction: column; gap: 10px;}
+  .settings-dialog-footer {padding: 14px 20px; gap: 12px;}
+}
+@media (max-width: 430px) {
+  .settings-backup-options {grid-template-columns: minmax(0, 1fr); gap: 10px;}
+  .settings-dialog .fee-group .field-grid {grid-template-columns: minmax(0, 1fr);}
+  .settings-status-badge {display: none;}
+}
+
+.quote-settings .setting-row select{border:1px solid var(--border);border-radius:6px;padding:8px 12px;background:var(--dark-surface,#fff);color:var(--dark-text-secondary,#77859e);font-size:12px}

@@ -1,0 +1,23 @@
+.broker-deals-table .deal-fills-toggle{display:inline-flex;align-items:center;gap:6px;min-height:28px;font-size:11px;color:var(--dark-text-accent,#687bc4)}
+.deal-fills-toggle svg{transition:transform .15s}
+.deal-fills-toggle svg.expanded{transform:rotate(180deg)}
+.broker-deals-table .broker-deal-action{min-width:220px;max-width:320px;white-space:normal}
+.broker-deals-table .broker-deal-action .broker-sync-lot{max-width:100%;min-width:180px}
+.broker-deals-table .deal-sync-message{line-height:1.7;overflow-wrap:anywhere;white-space:normal}
+.broker-deals-table .deal-sync-message[role=alert]{color:var(--positive)}
+.broker-deals-table .deal-fill-details>td{padding:0 18px 16px 42px;background:var(--dark-surface-accent,#f7f8fc)}
+.broker-deals-table .deal-fill-details table{min-width:650px;width:100%;margin:0}
+.broker-deals-table .deal-fill-details th,.broker-deals-table .deal-fill-details td{padding:10px 14px;font-size:10px}
+.deal-t-control{display:inline-flex;align-items:center;gap:7px;font-size:10px;color:var(--muted)}
+.broker-deals-table .deal-t-switch{position:relative;display:inline-block;width:32px;height:19px;min-height:19px;padding:0;border:0;border-radius:12px;background:var(--dark-border-accent,#d9deea);vertical-align:middle;cursor:pointer;transition:background .15s}
+.deal-t-switch>span{display:block;position:absolute;width:13px;height:13px;top:3px;left:3px;border-radius:50%;background:#fff;transition:transform .15s;box-shadow:0 1px 3px #0002}
+.broker-deals-table .deal-t-switch.enabled{background:var(--primary)}
+.deal-t-switch.enabled>span{transform:translateX(13px)}
+.broker-deals-table .deal-t-switch.mixed{background:var(--dark-text-warm,#c6a051)}
+.deal-t-switch.mixed>span{transform:translateX(6px)}
+.deal-t-switch:disabled{cursor:default;opacity:.65}
+.deal-t-switch:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+.broker-deals-table .deal-t-cell{min-width:78px;max-width:220px;white-space:normal}
+.broker-deals-table .deal-t-error{color:var(--positive);font-size:10px;line-height:1.7;white-space:normal;overflow-wrap:anywhere}
+.deal-buyback-button{display:inline-flex;align-items:center;min-height:28px;white-space:nowrap;font-size:11px}
+.deal-buyback-button:disabled{opacity:.45;cursor:default}

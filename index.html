@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7fb" />
+    <script>
+      try {
+        const theme = localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#101827' : '#f6f7fb';
+      } catch {}
+    </script>
+    <title>拾仓 · 交易记录与持仓成本</title>
+    <meta name="description" content="本地保存的股票与 ETF 交易记录，清楚看见每一笔持仓的成本。" />
+  </head>
+  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+</html>

@@ -1,0 +1,51 @@
+.trade-plans-page{display:grid;gap:20px;padding-bottom:30px}
+.trade-plans-page .page-heading{margin-bottom:0;align-items:center}
+.plan-page-actions{display:flex;gap:9px}
+.plan-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.plan-filters{display:flex;gap:5px;flex-wrap:wrap}
+.plan-filters button{display:flex;align-items:center;gap:8px;border:1px solid transparent;border-radius:7px;padding:9px 12px;font-size:12px;color:var(--muted)}
+.plan-filters button.active{background:var(--dark-surface,#fff);border-color:var(--border);color:var(--dark-text,#35445e)}
+.plan-filters button span{font-size:10px;opacity:.75;font-variant-numeric:tabular-nums}
+.plan-toolbar>select{padding:9px 12px;background:var(--dark-surface,#fff);border:1px solid var(--border);border-radius:7px;color:var(--dark-text-secondary,#66748d);font-size:11px}
+.plan-card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:16px;align-items:start}
+.plan-card{min-width:0;padding:21px;border:1px solid var(--border);border-radius:12px;background:var(--dark-surface,#fff);border-top:3px solid var(--positive)}
+.plan-card.plan-sell{border-top-color:var(--negative)}
+.plan-card.plan-inactive{border-top-color:var(--border)}
+.plan-card-heading{display:flex;align-items:start;justify-content:space-between;gap:12px}
+.plan-card-heading>div{display:grid;gap:6px;min-width:0}
+.plan-card-heading strong{font-size:16px;font-weight:600;color:var(--dark-text,#35445e);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.plan-card-heading>div>span{font-size:10px;color:var(--muted)}
+.plan-direction{display:inline-flex;gap:4px;align-items:center;flex-shrink:0;padding:5px 8px;border-radius:5px;font-size:11px}
+.plan-direction.buy{color:var(--positive);background:var(--dark-surface-up,#fff0f2)}
+.plan-direction.sell{color:var(--negative);background:var(--dark-surface-down,#edf8f3)}
+.plan-price{display:grid;gap:8px;margin:25px 0 22px;font-variant-numeric:tabular-nums}
+.plan-price>span{font-size:11px;color:var(--muted)}
+.plan-price strong{font-size:32px;line-height:1.2;font-weight:650;letter-spacing:-.6px;color:var(--positive)}
+.plan-sell .plan-price strong{color:var(--negative)}
+.plan-card-metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-top:15px;border-top:1px solid var(--border);font-variant-numeric:tabular-nums}
+.plan-card-metrics>span{display:grid;gap:7px;min-width:0}
+.plan-card-metrics>span:last-child{text-align:right}
+.plan-card-metrics small{font-size:10px;color:var(--muted)}
+.plan-card-metrics strong{font-size:15px;font-weight:550;overflow-wrap:anywhere}
+.plan-card-metrics em{font-size:10px;color:var(--muted);font-weight:400;font-style:normal}
+.plan-date-line{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:20px;color:var(--muted);font-size:10px}
+.plan-date-line .plan-overdue{color:var(--dark-text-warm,#a88743)}
+.plan-status{border-radius:4px;padding:3px 6px;background:var(--dark-surface-accent,#f4f6fb)}
+.plan-status.pending{color:var(--dark-text-accent,#687bc4)}
+.plan-status.completed{color:var(--negative)}
+.plan-card-note{margin:14px 0 0;color:var(--dark-text-secondary,#7a879b);font-size:12px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;max-height:150px;overflow:auto}
+.plan-card-actions{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:13px;border-top:1px solid var(--border)}
+.plan-card-actions>button{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:32px;font-size:11px;color:var(--muted)}
+.plan-card-actions>button:disabled{opacity:.45;cursor:default}
+.plan-card-actions>.plan-complete{margin-right:auto;color:var(--dark-text-accent,#687bc4);font-weight:550}
+.plan-card-actions>.plan-delete:hover{color:var(--positive)}
+.plan-empty{padding:65px 24px;display:grid;place-items:center;gap:18px;text-align:center;color:var(--muted);font-size:12px}
+.plan-empty strong{font-size:14px;font-weight:500}
+.plan-form-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.plan-dialog .plan-side-switch{margin:0;width:100%}
+.plan-dialog .instrument-search-hint{font-size:10px}
+.plan-dialog .modal-description{margin-bottom:18px}
+.plan-dialog .form{gap:15px}
+.plan-dialog textarea{resize:vertical}
+@media(max-width:650px){.trade-plans-page{gap:15px}.plan-page-actions .button{padding:0 10px;font-size:11px}.plan-card{padding:17px}.plan-filters button{padding:8px}.plan-card-grid{gap:12px}.plan-form-pair{gap:10px}}
+@media(max-width:760px){.main-nav{overflow-x:auto;scrollbar-width:thin}.main-nav .nav-item{flex-shrink:0}}

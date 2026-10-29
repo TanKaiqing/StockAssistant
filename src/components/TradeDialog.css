@@ -1,0 +1,112 @@
+.trade-shortcuts > .shortcut-heading {gap: 9px;}
+.shortcut-quote-time {margin-left: auto; color: var(--muted); font-size: 9px; font-weight: 400; white-space: nowrap; font-variant-numeric: tabular-nums;}
+.trade-form .trade-context .trade-direction {width: 164px; flex: 0 0 164px; margin: 0; align-self: center;}
+.trade-form .trade-context {flex-wrap: nowrap; padding-bottom: 18px;}
+.trade-form .trade-context .trade-direction button {min-height: 33px; padding: 6px 10px; font-size: 11px;}
+.trade-form .trade-context-name strong {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.modal-content.trade-dialog.sell-trade-dialog {
+  width: min(940px, calc(100vw - 40px));
+  height: min(860px, 94dvh);
+  max-height: 94dvh;
+}
+@media (max-width: 650px) {
+  .trade-form .trade-context {display: grid; grid-template-columns: minmax(0, 1fr) 42px 52px 96px; gap: 6px; align-items: center;}
+  .trade-form .trade-context-icon {display: none;}
+  .trade-form .trade-context-name {min-width: 0;}
+  .trade-form .trade-context-name strong {font-size: 12px;}
+  .trade-form .trade-context-name > span {font-size: 8px;}
+  .trade-form .trade-context-stat {min-width: 0; padding-left: 6px;}
+  .trade-form .trade-context-stat > span {font-size: 8px; white-space: nowrap;}
+  .trade-form .trade-context-stat strong {font-size: 11px; white-space: nowrap;}
+  .trade-form .trade-context-stat small {display: none;}
+  .trade-form .trade-context .trade-direction {width: 96px; padding: 3px;}
+  .trade-form .trade-context .trade-direction button {min-height: 29px; padding: 4px; font-size: 10px; gap: 3px;}
+  .trade-form .trade-context .trade-direction svg {width: 12px; height: 12px;}
+}
+.sell-trade-dialog .modal-header {padding: 19px 24px 15px;}
+.sell-trade-dialog .modal-title {font-size: 20px; margin-bottom: 5px;}
+.sell-trade-dialog .modal-description {font-size: 10px;}
+.sell-form .trade-scroll-area {padding: 18px 24px 20px;}
+.sell-form .trade-context {padding-bottom: 14px; gap: 10px;}
+.sell-form .trade-context-icon {width: 34px; height: 34px; border-radius: 8px;}
+.sell-form .trade-context-stat {padding-left: 16px; min-width: 92px;}
+.sell-form .trade-direction {width: 190px; margin-bottom: 16px;}
+.sell-form .trade-direction button {min-height: 31px; font-size: 11px;}
+.sell-form .trade-layout {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  grid-template-areas: "fields shortcuts" "prices shortcuts" "notes notes";
+  gap: 16px 20px;
+}
+.sell-form .trade-main-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 13px 12px;
+}
+.sell-form .trade-main-fields > .trade-section-heading {grid-column: 1 / -1; order: 0;}
+.sell-form .trade-key-fields {grid-column: 1 / -1; order: 1; gap: 12px;}
+.sell-form .trade-key-fields input {min-height: 54px; font-size: 25px; font-weight: 600;}
+.sell-form .trade-main-fields > .field {order: 2; align-self: start; min-width: 0;}
+.sell-form .trade-main-fields > .field input {width: 100%; min-width: 0;}
+.sell-form .trade-field-divider {display: none;}
+.sell-form .trade-main-fields .fee-mode {flex-wrap: wrap; gap: 3px;}
+.sell-form .trade-price-section {grid-area: prices; gap: 9px;}
+.sell-form .trade-price-section .trade-shortcuts {padding: 12px; border-radius: 9px;}
+.sell-form .price-shortcuts {gap: 5px;}
+.sell-form .price-shortcuts button {min-height: 45px; padding: 6px 2px;}
+.sell-form .target-price-shortcut {padding-top: 9px; border-top: 1px solid var(--border);}
+.sell-form .target-price-shortcut .button {min-height: 33px; font-size: 11px;}
+.sell-form .trade-batch-column {gap: 12px;}
+.sell-form .trade-lot-field {padding: 14px; gap: 9px;}
+.sell-form .trade-lot-field > select {min-height: 42px; width: 100%; font-size: 11px;}
+.sell-lot-summary {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  margin-top: 5px; padding: 12px 0; border-block: 1px solid var(--border);
+}
+.sell-lot-summary > span {display: grid; gap: 6px;}
+.sell-lot-summary small {font-size: 10px; color: var(--muted);}
+.sell-lot-summary strong {font-size: 17px; font-weight: 600; font-variant-numeric: tabular-nums;}
+.sell-lot-summary em {font-size: 10px; font-weight: 400; font-style: normal; color: var(--muted);}
+.sell-form .lot-risk-settings {margin-top: 2px; padding: 0; border: 0; background: transparent; gap: 11px;}
+.lot-risk-heading {display: flex; align-items: center; justify-content: space-between; gap: 8px;}
+.lot-risk-heading > span {font-size: 9px; color: var(--muted); font-weight: 400;}
+.lot-risk-grid {display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px;}
+.lot-risk-field {display: grid; gap: 7px; min-width: 0;}
+.sell-form .lot-risk-field > label {font-size: 11px;}
+.sell-form .lot-risk-field .target-inputs {grid-template-columns: minmax(0, 1fr); gap: 7px;}
+.sell-form .lot-risk-field input {min-height: 43px; font-size: 18px; font-weight: 550;}
+.sell-form .lot-risk-field select {min-height: 34px; font-size: 10px; padding: 7px 8px;}
+.sell-form .lot-risk-settings > .button {justify-self: end; min-height: 32px;}
+.sell-note-section {border-top: 1px solid var(--border); padding-top: 10px;}
+.sell-note-section > summary {cursor: pointer; font-size: 11px; color: var(--muted); padding: 3px 0;}
+.sell-note-section > summary > span {margin-left: 7px; font-size: 9px; opacity: .7;}
+.sell-note-section textarea {margin-top: 10px; min-height: 56px;}
+.sell-form .trade-dialog-footer {padding: 16px 24px; max-height: 40dvh;}
+.sell-form .trade-footer-row {display: grid; grid-template-columns: minmax(0, 1fr); gap: 13px;}
+.sell-form .trade-summary .sell-preview {grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 7px 16px;}
+.sell-form .trade-summary .sell-preview > .field-hint {display: none;}
+.sell-form .trade-summary .trade-preview {display: grid; justify-content: start; gap: 4px;}
+.sell-form .trade-summary .trade-preview > strong {font-size: 31px; line-height: 1.15;}
+.sell-form .trade-summary .preview-breakdown {display: grid; gap: 5px; font-size: 10px; text-align: right;}
+.sell-form .trade-summary .sell-preview > .form-error {grid-column: 1 / -1;}
+.sell-form .trade-dialog-footer .form-actions {display: flex; justify-content: end; padding-top: 12px; border-top: 1px solid var(--border);}
+.sell-form .trade-dialog-footer .form-actions > button:first-child {margin-right: auto;}
+.sell-form .trade-dialog-footer .button {min-height: 40px; min-width: 110px;}
+@media (max-width: 720px) {
+  .modal-content.trade-dialog.sell-trade-dialog {width: calc(100vw - 20px); height: calc(100dvh - 20px); max-height: calc(100dvh - 20px);}
+  .sell-trade-dialog .modal-header {padding: 17px 18px 13px;}
+  .sell-form .trade-scroll-area {padding: 16px 18px;}
+  .sell-form .trade-layout {grid-template-columns: minmax(0, 1fr); grid-template-areas: "fields" "shortcuts" "prices" "notes"; gap: 17px;}
+  .sell-form .trade-context {flex-wrap: wrap;}
+  .sell-form .trade-context-stat {min-width: 76px; padding-left: 10px;}
+  .sell-form .trade-context-name {min-width: 100px;}
+  .sell-form .trade-key-fields input {font-size: 23px;}
+  .sell-form .trade-dialog-footer {padding: 13px 18px;}
+  .sell-form .trade-summary .trade-preview > strong {font-size: 27px;}
+  .sell-form .trade-summary .preview-breakdown {font-size: 9px;}
+  .sell-form .trade-dialog-footer .form-actions {display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px;}
+  .sell-form .trade-dialog-footer .form-actions > button {min-width: 0; padding-inline: 8px; grid-column: auto; grid-row: auto; margin: 0;}
+  .sell-form .trade-dialog-footer .form-actions.dual-trade-actions > button:first-child {grid-column: auto; grid-row: auto; margin-right: 0;}
+  .sell-form .trade-dialog-footer .form-actions:not(.dual-trade-actions) {grid-template-columns: 1fr 2fr;}
+}
+
+.t-sell-marker{grid-column:1/-1;display:grid;gap:16px}.t-sell-marker>.field{max-width:420px}.t-sell-marker .trade-toggle-switch{margin:0}.t-sell-marker input[type=number]{width:100%;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--dark-surface,#fff);color:inherit}
